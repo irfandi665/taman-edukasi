@@ -12,7 +12,7 @@ include('includes/config.php');
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="keywords" content="">
 <meta name="description" content="">
-<title>24x7 Ambulance Booking | Aarogya Services| Page details</title>
+<title>Taman Edukasi Lalu Lintas Dinas Perhubungan Kabupaten Banyumas</title>
 <!--Bootstrap -->
 <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
 <!--Custome Style -->

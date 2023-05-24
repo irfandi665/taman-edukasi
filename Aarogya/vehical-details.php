@@ -42,7 +42,7 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="keywords" content="">
 <meta name="description" content="">
-<title>24x7 Ambulance Booking | Aarogya Services| Vehicle Details</title>
+<title>Taman Edukasi Lalu Lintas Dinas Perhubungan Kabupaten Banyumas</title>
 <!--Bootstrap -->
 <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
 <!--Custome Style -->
@@ -140,7 +140,7 @@ $_SESSION['brndid']=$result->bid;
             </li>
             <li> <i class="fa fa-cogs" aria-hidden="true"></i>
               <h5><?php echo htmlentities($result->FuelType);?></h5>
-              <p>Fuel Type</p>
+              <p>Level</p>
             </li>
        
             <li> <i class="fa fa-user-plus" aria-hidden="true"></i>

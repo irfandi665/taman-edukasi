@@ -32,7 +32,7 @@ $msg="Vehicle  record deleted successfully";
 	<meta name="author" content="">
 	<meta name="theme-color" content="#3e454c">
 	
-	<title>Car Rental Portal |Admin Manage Vehicles   </title>
+	<title>DISHUB Portal |Admin Manage Vehicles   </title>
 
 	<!-- Font awesome -->
 	<link rel="stylesheet" href="css/font-awesome.min.css">
@@ -97,7 +97,7 @@ $msg="Vehicle  record deleted successfully";
 											<th>Vehicle Title</th>
 											<th>Brand </th>
 											<th>Price Per day</th>
-											<th>Fuel Type</th>
+											<th>Level</th>
 											<th>Model Year</th>
 											<th>Action</th>
 										</tr>
@@ -108,7 +108,7 @@ $msg="Vehicle  record deleted successfully";
 										<th>Vehicle Title</th>
 											<th>Brand </th>
 											<th>Price Per day</th>
-											<th>Fuel Type</th>
+											<th>Level</th>
 											<th>Model Year</th>
 											<th>Action</th>
 										</tr>

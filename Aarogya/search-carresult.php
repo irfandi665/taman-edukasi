@@ -12,7 +12,7 @@ error_reporting(0);
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="keywords" content="">
 <meta name="description" content="">
-<title>24x7 Ambulance Booking | Aarogya Services</title>
+<title>Taman Edukasi Lalu Lintas Dinas Perhubungan Kabupaten Banyumas</title>
 <!--Bootstrap -->
 <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
 <!--Custome Style -->
@@ -153,10 +153,10 @@ foreach($results as $result)
               </div>
               <div class="form-group select">
                 <select class="form-control">
-                  <option>Select Fuel Type</option>
-<option value="Petrol">Petrol</option>
-<option value="Diesel">Diesel</option>
-<option value="CNG">CNG</option>
+                  <option>select education level</option>
+<option value="Elementary school">Elementary school</option>
+<option value="junior high school">junior high school</option>
+<option value="senior high school">senior high school</option>
                 </select>
               </div>
              

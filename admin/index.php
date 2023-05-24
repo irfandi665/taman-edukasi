@@ -1,26 +1,22 @@
 <?php
 session_start();
 include('includes/config.php');
-if(isset($_POST['login']))
-{
-$email=$_POST['username'];
-$password=md5($_POST['password']);
-$sql ="SELECT UserName,Password FROM admin WHERE UserName=:email and Password=:password";
-$query= $dbh -> prepare($sql);
-$query-> bindParam(':email', $email, PDO::PARAM_STR);
-$query-> bindParam(':password', $password, PDO::PARAM_STR);
-$query-> execute();
-$results=$query->fetchAll(PDO::FETCH_OBJ);
-if($query->rowCount() > 0)
-{
-$_SESSION['alogin']=$_POST['username'];
-echo "<script type='text/javascript'> document.location = 'change-password.php'; </script>";
-} else{
-  
-  echo "<script>alert('Invalid Details');</script>";
+if (isset($_POST['login'])) {
+	$email = $_POST['username'];
+	$password = md5($_POST['password']);
+	$sql = "SELECT UserName,Password FROM admin WHERE UserName=:email and Password=:password";
+	$query = $dbh->prepare($sql);
+	$query->bindParam(':email', $email, PDO::PARAM_STR);
+	$query->bindParam(':password', $password, PDO::PARAM_STR);
+	$query->execute();
+	$results = $query->fetchAll(PDO::FETCH_OBJ);
+	if ($query->rowCount() > 0) {
+		$_SESSION['alogin'] = $_POST['username'];
+		echo "<script type='text/javascript'> document.location = 'change-password.php'; </script>";
+	} else {
 
-}
-
+		echo "<script>alert('Invalid Details');</script>";
+	}
 }
 
 ?>
@@ -34,7 +30,7 @@ echo "<script type='text/javascript'> document.location = 'change-password.php';
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title> Service Portal | Admin Login</title>
+	<title> DISHUB Service Portal | Admin Login</title>
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
@@ -46,7 +42,7 @@ echo "<script type='text/javascript'> document.location = 'change-password.php';
 </head>
 
 <body>
-	
+
 	<div class="login-page bk-img" style="background-image: url(img/login-bg.png);">
 		<div class="form-content">
 			<div class="container">
@@ -63,7 +59,7 @@ echo "<script type='text/javascript'> document.location = 'change-password.php';
 									<label for="" class="text-uppercase text-sm">Password</label>
 									<input type="password" placeholder="Password" name="password" class="form-control mb">
 
-								
+
 
 									<button class="btn btn-primary btn-block" name="login" type="submit">LOGIN</button>
 
@@ -75,7 +71,7 @@ echo "<script type='text/javascript'> document.location = 'change-password.php';
 			</div>
 		</div>
 	</div>
-	
+
 	<!-- Loading Scripts -->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap-select.min.js"></script>
