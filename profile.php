@@ -127,7 +127,7 @@ if (strlen($_SESSION['login']) == 0) {
         <section class="user_profile inner_pages">
           <div class="container">
             <div class="user_profile_info gray-bg padding_4x4_40">
-              <div class="upload_user_logo"> <img src="assets/images/dealer-logo.jpg" alt="image">
+              <div class="upload_user_logo"> <img src="assets/images/person.png" alt="image">
               </div>
 
               <div class="dealer_info">
@@ -157,7 +157,7 @@ if (strlen($_SESSION['login']) == 0) {
                         </div>
                       <?php } ?>
                       <div class="form-group">
-                        <label class="control-label">Full Name</label>
+                        <label class="control-label">Nama Sekolah</label>
                         <input class="form-control white_bg" name="fullname" value="<?php echo htmlentities($result->FullName); ?>" id="fullname" type="text" required>
                       </div>
                       <div class="form-group">
@@ -165,7 +165,7 @@ if (strlen($_SESSION['login']) == 0) {
                         <input class="form-control white_bg" value="<?php echo htmlentities($result->EmailId); ?>" name="emailid" id="email" type="email" required readonly>
                       </div>
                       <div class="form-group">
-                        <label class="control-label">Phone Number</label>
+                        <label class="control-label">Nomer Telepon</label>
                         <input class="form-control white_bg" name="mobilenumber" value="<?php echo htmlentities($result->ContactNo); ?>" id="phone-number" type="text" required>
                       </div>
                       <div class="form-group">
@@ -178,7 +178,7 @@ if (strlen($_SESSION['login']) == 0) {
                       </div>
                       <div class="form-group">
                         <label class="control-label">Country</label>
-                        <input class="form-control white_bg" id="country" name="country" type="file">
+                        <input class="form-control white_bg" id="country" name="country" value="<?php echo htmlentities($result->Country); ?>" type="text">
                       </div>
                       <div class="form-group">
                         <label class="control-label">City</label>

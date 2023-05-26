@@ -15,7 +15,7 @@ if (strlen($_SESSION['login']) == 0) {
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <title>CarForYou - Responsive Car Dealer HTML5 Template</title>
+    <title>Taman Edukasi Lalu Lintas Dinas Perhubungan Kabupaten Banyumas</title>
     <!--Bootstrap -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
     <!--Custome Style -->
@@ -97,13 +97,13 @@ if (strlen($_SESSION['login']) == 0) {
         <section class="user_profile inner_pages">
           <div class="container">
             <div class="user_profile_info gray-bg padding_4x4_40">
-              <div class="upload_user_logo"> <img src="assets/images/dealer-logo.jpg" alt="image">
+              <div class="upload_user_logo"> <img src="assets/images/person.png" alt="image">
               </div>
 
               <div class="dealer_info">
                 <h5><?php echo htmlentities($result->FullName); ?></h5>
                 <p><?php echo htmlentities($result->Address); ?><br>
-                  <?php echo htmlentities($result->City); ?>&nbsp;<?php echo htmlentities($result->Country);
+                  <?php echo htmlentities($result->City); ?>&nbsp;| <?php echo htmlentities($result->Country);
                                                                 }
                                                               } ?></p>
               </div>
@@ -141,7 +141,7 @@ if (strlen($_SESSION['login']) == 0) {
 
                             <?php } else if ($result->Status == 2) { ?>
                               <div class="vehicle_status"> <a href="#" class="btn outline btn-xs">Full service</a>
-                              <p style="color: red; font-size: 11px;">*Select another date</p>
+                              <p style="color: red; font-size: 11px;">*Pilih tanggal lain</p>
 
                                 <div class="clearfix"></div>
                               </div>
@@ -154,7 +154,11 @@ if (strlen($_SESSION['login']) == 0) {
                               </div>
                             <?php } ?>
                             <div style="float: left">
-                              <p><b>Message:</b> <?php echo htmlentities($result->message); ?> </p>
+
+                              <p><b>Berkas: </b> <a href="admin/uploads/<?php echo htmlentities($result->message); ?>" target="_blank">
+																<?php echo htmlentities($result->message); ?>
+															</a> </p>
+                              
                             </div>
                             </li>
                         <?php }

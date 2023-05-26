@@ -17,21 +17,13 @@
               <p class="uppercase_text">Service Helpline Call Us: </p>
               <a href="tel:61-1234-5678-09">0000-0000-0000</a>
             </div>
-            <div class="social-follow">
-              <ul>
-                <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-              </ul>
-            </div>
+            
             <?php if (strlen($_SESSION['login']) == 0) {
             ?>
               <div class="login_btn"> <a href="#loginform" class="btn btn-xs uppercase" data-toggle="modal" data-dismiss="modal">Login / Register</a> </div>
             <?php } else {
 
-              echo "Welcome To The Portal";
+              // echo "Welcome To The Portal";
             } ?>
           </div>
         </div>
@@ -95,7 +87,6 @@
           <li><a href="index.php">Home</a> </li>
 
           <li><a href="page.php?type=aboutus">About Us</a></li>
-          <li><a href="car-listing.php">Car Listing</a>
           <li><a href="page.php?type=faqs">FAQs</a></li>
           <li><a href="contact-us.php">Contact Us</a></li>
 

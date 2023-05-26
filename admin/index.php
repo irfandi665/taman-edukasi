@@ -43,7 +43,7 @@ if (isset($_POST['login'])) {
 
 <body>
 
-	<div class="login-page bk-img" style="background-image: url(img/login-bg.png);">
+	<div class="login-page bk-img" style="background-image: url(img/dishub2.png);">
 		<div class="form-content">
 			<div class="container">
 				<div class="row">

@@ -156,8 +156,14 @@ if (strlen($_SESSION['alogin']) == 0) {
 														<td><a href="edit-vehicle.php?id=<?php echo htmlentities($result->vid); ?>"><?php echo htmlentities($result->BrandName); ?> , <?php echo htmlentities($result->VehiclesTitle); ?></td>
 														<td><?php echo htmlentities($result->FromDate); ?></td>
 														<td><?php echo htmlentities($result->ToDate); ?></td>
-														<td><?php echo htmlentities($result->message); ?></td>
-														<td><?php
+														<td>
+															<a href="uploads/<?php echo htmlentities($result->message); ?>" target="_blank">
+																<?php echo htmlentities($result->message); ?>
+															</a>
+														<td>
+
+
+															<?php
 															if ($result->Status == 0) {
 																echo htmlentities('Not Confirmed yet');
 															} else if ($result->Status == 1) {

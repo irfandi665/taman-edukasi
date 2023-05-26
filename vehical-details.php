@@ -5,27 +5,35 @@ error_reporting(0);
 if (isset($_POST['submit'])) {
   $fromdate = $_POST['fromdate'];
   $todate = $_POST['todate'];
-  $message = $_POST['message'];
   $useremail = $_SESSION['login'];
   $status = 0;
   $vhid = $_GET['vhid'];
+
+  // Menghandle upload file
+  $file = $_FILES['message'];
+  $filename = $file['name'];
+  $filetmp = $file['tmp_name'];
+  $filepath = 'admin/uploads/' . $filename;
+
+  // Pindahkan file yang diupload ke folder "uploads"
+  move_uploaded_file($filetmp, $filepath);
+
   $sql = "INSERT INTO  tblbooking(userEmail,VehicleId,FromDate,ToDate,message,Status) VALUES(:useremail,:vhid,:fromdate,:todate,:message,:status)";
   $query = $dbh->prepare($sql);
   $query->bindParam(':useremail', $useremail, PDO::PARAM_STR);
   $query->bindParam(':vhid', $vhid, PDO::PARAM_STR);
   $query->bindParam(':fromdate', $fromdate, PDO::PARAM_STR);
   $query->bindParam(':todate', $todate, PDO::PARAM_STR);
-  $query->bindParam(':message', $message, PDO::PARAM_STR);
+  $query->bindParam(':message', $filename, PDO::PARAM_STR);
   $query->bindParam(':status', $status, PDO::PARAM_STR);
   $query->execute();
   $lastInsertId = $dbh->lastInsertId();
   if ($lastInsertId) {
-    echo "<script>alert('Booking successfull.');</script>";
+    echo "<script>alert('Booking successful.');</script>";
   } else {
     echo "<script>alert('Something went wrong. Please try again');</script>";
   }
 }
-
 ?>
 
 
@@ -161,7 +169,7 @@ if (isset($_POST['submit'])) {
 
 
                     <!-- Accessories -->
-                    
+
                   </div>
                 </div>
 
@@ -175,23 +183,29 @@ if (isset($_POST['submit'])) {
             <aside class="col-md-3">
 
               <div class="share_vehicle">
-                <p>Share: <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a> <a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a> </p>
               </div>
               <div class="sidebar_widget">
                 <div class="widget_heading">
                   <h5><i class="fa fa-envelope" aria-hidden="true"></i>Book Now</h5>
                 </div>
-                <form method="post">
+                <!-- <form method="post"> -->
+                <form method="post" enctype="multipart/form-data">
                   <div class="form-group">
+                  <p class="help-block">Tanggal Mulai<span style="color:red">*</span></p>
                     <input type="datetime-local" class="form-control" name="fromdate" placeholder="From Date and Time" required>
                   </div>
-
                   <div class="form-group">
+                  <p class="help-block">Jumlah Peserta<span style="color:red">*</span></p>
                     <input type="text" class="form-control" name="todate" placeholder="Jumlah Peserta" required>
                   </div>
                   <div class="form-group">
-                    <textarea rows="4" class="form-control" name="message" placeholder="Message" required></textarea>
+                  <p class="help-block">Surat Pengantar | <span style="color:red">opsional</span></p>
+                    <input type="file" class="form-control" name="message">
+                    
                   </div>
+
+
+
                   <?php if ($_SESSION['login']) { ?>
                     <div class="form-group">
                       <input type="submit" class="btn" name="submit" value="Book Now">

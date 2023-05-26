@@ -72,7 +72,8 @@ error_reporting(0);
     <div class="container">
       <div class="section-header text-center" id="resentnewcar">
         <div class="section-header text-center">
-          <h2>Taman Edukasi Lalu Lintas <span>Dinas Perhubungan Kabupaten Banyumas</span></h2>
+          <h2>Taman Edukasi Lalu Lintas</h2>
+          <h2><span>Dinas Perhubungan Kabupaten Banyumas</span></h2>
           <p>Program pada taman edukasi:
           <p>
         </div>
@@ -263,6 +264,5 @@ error_reporting(0);
 
 </body>
 
-<!-- Mirrored from themes.webmasterdriver.net/carforyou/demo/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 16 Jun 2017 07:22:11 GMT -->
 
 </html>
