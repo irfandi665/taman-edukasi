@@ -107,10 +107,15 @@ if (isset($_POST['submit'])) {
         <div><img src="admin/img/vehicleimages/<?php echo htmlentities($result->Vimage2); ?>" class="img-responsive" alt="image" width="900" height="560"></div>
         <div><img src="admin/img/vehicleimages/<?php echo htmlentities($result->Vimage3); ?>" class="img-responsive" alt="image" width="900" height="560"></div>
         <div><img src="admin/img/vehicleimages/<?php echo htmlentities($result->Vimage4); ?>" class="img-responsive" alt="image" width="900" height="560"></div>
-        <?php if ($result->Vimage5 == "") {
+        <div><img src="admin/img/vehicleimages/<?php echo htmlentities($result->Vimage5); ?>" class="img-responsive" alt="image" width="900" height="560"></div>
+        <div><img src="admin/img/vehicleimages/<?php echo htmlentities($result->Vimage6); ?>" class="img-responsive" alt="image" width="900" height="560"></div>
+
+
+        
+        <?php if ($result->Vimage6 == "") {
         } else {
         ?>
-          <div><img src="admin/img/vehicleimages/<?php echo htmlentities($result->Vimage5); ?>" class="img-responsive" alt="image" width="900" height="560"></div>
+          <div><img src="admin/img/vehicleimages/<?php echo htmlentities($result->Vimage1); ?>" class="img-responsive" alt="image" width="900" height="560"></div>
         <?php } ?>
       </section>
       <!--/Listing-Image-Slider-->
@@ -132,24 +137,7 @@ if (isset($_POST['submit'])) {
           </div>
           <div class="row">
             <div class="col-md-9">
-              <div class="main_features">
-                <ul>
 
-                  <li> <i class="fa fa-calendar" aria-hidden="true"></i>
-                    <h5><?php echo htmlentities($result->ModelYear); ?></h5>
-                    <p>Reg.Year</p>
-                  </li>
-                  <li> <i class="fa fa-cogs" aria-hidden="true"></i>
-                    <h5><?php echo htmlentities($result->FuelType); ?></h5>
-                    <p>Level</p>
-                  </li>
-
-                  <li> <i class="fa fa-user-plus" aria-hidden="true"></i>
-                    <h5><?php echo htmlentities($result->SeatingCapacity); ?></h5>
-                    <p>Participant</p>
-                  </li>
-                </ul>
-              </div>
               <div class="listing_more_info">
                 <div class="listing_detail_wrap">
                   <!-- Nav tabs -->
@@ -191,17 +179,17 @@ if (isset($_POST['submit'])) {
                 <!-- <form method="post"> -->
                 <form method="post" enctype="multipart/form-data">
                   <div class="form-group">
-                  <p class="help-block">Tanggal Mulai<span style="color:red">*</span></p>
+                    <p class="help-block">Tanggal Mulai<span style="color:red">*</span></p>
                     <input type="datetime-local" class="form-control" name="fromdate" placeholder="From Date and Time" required>
                   </div>
                   <div class="form-group">
-                  <p class="help-block">Jumlah Peserta<span style="color:red">*</span></p>
+                    <p class="help-block">Jumlah Peserta<span style="color:red">*</span></p>
                     <input type="text" class="form-control" name="todate" placeholder="Jumlah Peserta" required>
                   </div>
                   <div class="form-group">
-                  <p class="help-block">Surat Pengantar | <span style="color:red">opsional</span></p>
+                    <p class="help-block">Surat Pengantar | <span style="color:red">opsional</span></p>
                     <input type="file" class="form-control" name="message">
-                    
+
                   </div>
 
 
@@ -245,12 +233,6 @@ if (isset($_POST['submit'])) {
                         <h5><a href="vehical-details.php?vhid=<?php echo htmlentities($result->id); ?>"><?php echo htmlentities($result->BrandName); ?> , <?php echo htmlentities($result->VehiclesTitle); ?></a></h5>
                         <!-- <p class="list-price">$<?php echo htmlentities($result->PricePerDay); ?></p> -->
 
-                        <ul class="features_list">
-
-                          <li><i class="fa fa-user" aria-hidden="true"></i><?php echo htmlentities($result->SeatingCapacity); ?> seats</li>
-                          <li><i class="fa fa-calendar" aria-hidden="true"></i><?php echo htmlentities($result->ModelYear); ?> model</li>
-                          <li><i class="fa fa-car" aria-hidden="true"></i><?php echo htmlentities($result->FuelType); ?></li>
-                        </ul>
                       </div>
                     </div>
                   </div>

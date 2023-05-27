@@ -1060,7 +1060,7 @@ nav.navbar {
 	3.1. Banner
 -------------------------------*/
 .banner-section {
-  background-image: url("../images/banner-image-2.jpg");
+  background-image: url("../images/banner-image-4.JPEG");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1558,7 +1558,7 @@ nav.navbar {
 	3.8 Testimonial-Section
 -----------------------------*/
 .testimonial-section {
-  background-image: url("../images/testimonial-bg.jpg");
+  background-image: url("../images/banner-image-4.JPEG");
 }
 .white-text h2 {
   color: #ffffff;

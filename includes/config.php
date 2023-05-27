@@ -3,7 +3,7 @@
 define('DB_HOST','localhost');
 define('DB_USER','root');
 define('DB_PASS','');
-define('DB_NAME','carrental');
+define('DB_NAME','taman_edukasi');
 // Establish database connection.
 try
 {

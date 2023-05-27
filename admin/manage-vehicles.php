@@ -15,7 +15,7 @@ $sql = "delete from tblvehicles  WHERE  id=:delid";
 $query = $dbh->prepare($sql);
 $query -> bindParam(':delid',$delid, PDO::PARAM_STR);
 $query -> execute();
-$msg="Vehicle  record deleted successfully";
+$msg="Record deleted successfully";
 }
 
 

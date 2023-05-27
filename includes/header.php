@@ -10,12 +10,12 @@
             <div class="header_widgets">
               <div class="circle_icon"> <i class="fa fa-envelope" aria-hidden="true"></i> </div>
               <p class="uppercase_text">For Support Mail us : </p>
-              <a href="mailto:info@example.com">dishub@example.com</a>
+              <a href="mailto:info@example.com">dinhub@banyumaskab.go.id</a>
             </div>
             <div class="header_widgets">
               <div class="circle_icon"> <i class="fa fa-phone" aria-hidden="true"></i> </div>
               <p class="uppercase_text">Service Helpline Call Us: </p>
-              <a href="tel:61-1234-5678-09">0000-0000-0000</a>
+              <a href="tel:61-1234-5678-09">(0281) 637211</a>
             </div>
             
             <?php if (strlen($_SESSION['login']) == 0) {

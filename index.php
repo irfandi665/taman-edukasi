@@ -82,7 +82,7 @@ error_reporting(0);
           <!-- Nav tabs -->
           <div class="recent-tab">
             <ul class="nav nav-tabs" role="tablist">
-              <li role="presentation" class="active"><a href="#resentnewcar" role="tab" data-toggle="tab">New Program</a></li>
+              <li role="presentation" class="active"><a href="#resentnewcar" role="tab" data-toggle="tab">Program</a></li>
             </ul>
           </div>
           <!-- Recently Listed Cars -->
@@ -101,14 +101,10 @@ error_reporting(0);
                   <div class="col-list-3">
                     <div class="recent-car-list">
                       <div class="car-info-box"> <a href="vehical-details.php?vhid=<?php echo htmlentities($result->id); ?>"><img src="admin/img/vehicleimages/<?php echo htmlentities($result->Vimage1); ?>" class="img-responsive" alt="image"></a>
-                        <ul>
-                          <li><i class="fa fa-car" aria-hidden="true"></i><?php echo htmlentities($result->FuelType); ?></li>
-                          <li><i class="fa fa-calendar" aria-hidden="true"></i><?php echo htmlentities($result->ModelYear); ?> Model</li>
-                          <li><i class="fa fa-user" aria-hidden="true"></i><?php echo htmlentities($result->SeatingCapacity); ?> seats</li>
-                        </ul>
+                        
                       </div>
                       <div class="car-title-m">
-                        <h6><a href="vehical-details.php?vhid=<?php echo htmlentities($result->id); ?>"><?php echo htmlentities($result->BrandName); ?> , <?php echo htmlentities($result->VehiclesTitle); ?></a></h6>
+                        <h6><a href="vehical-details.php?vhid=<?php echo htmlentities($result->id); ?>"><?php echo htmlentities($result->BrandName); ?>  <?php echo htmlentities($result->VehiclesTitle); ?></a></h6>
                       </div>
                       <div class="inventory_info_m">
                         <p><?php echo substr($result->VehiclesOverview, 0, 70); ?></p>
@@ -173,7 +169,7 @@ error_reporting(0);
   <section class="section-padding testimonial-section parallex-bg">
     <div class="container div_zindex">
       <div class="section-header white-text text-center">
-        <h2>Our Satisfied <span>Customers</span></h2>
+        <h2>Testimoni <span>Sekolah</span></h2>
       </div>
       <div class="row">
         <div id="testimonial-slider">
