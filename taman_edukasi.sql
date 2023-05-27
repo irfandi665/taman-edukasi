@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 26 Bulan Mei 2023 pada 13.00
+-- Waktu pembuatan: 27 Bulan Mei 2023 pada 14.39
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.2.4
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `carrental`
+-- Database: `taman_edukasi`
 --
 
 -- --------------------------------------------------------
@@ -64,7 +64,8 @@ CREATE TABLE `tblbooking` (
 
 INSERT INTO `tblbooking` (`id`, `userEmail`, `VehicleId`, `FromDate`, `ToDate`, `message`, `Status`, `PostingDate`) VALUES
 (52, 'tes3@email.com', 2, '2023-05-27 09:11:00', '20', 'news app.pdf', 0, '2023-05-26 02:11:41'),
-(54, 'tes@email.com', 2, '2023-05-27 10:22:00', '34', 'news app-2-5.pdf', 2, '2023-05-26 03:23:08');
+(54, 'tes@email.com', 2, '2023-05-27 10:22:00', '34', 'news app-2-5.pdf', 2, '2023-05-26 03:23:08'),
+(55, 'tes@email.com', 8, '2023-06-02 19:14:00', '23', 'news app-2-5.pdf', 0, '2023-05-27 12:14:12');
 
 -- --------------------------------------------------------
 
@@ -84,8 +85,7 @@ CREATE TABLE `tblbrands` (
 --
 
 INSERT INTO `tblbrands` (`id`, `BrandName`, `CreationDate`, `UpdationDate`) VALUES
-(1, 'honda', '2023-05-23 03:56:58', NULL),
-(2, 'Taman Edukasi', '2023-05-23 04:46:13', '2023-05-23 16:51:46');
+(3, 'Pelayanan', '2023-05-27 12:12:22', NULL);
 
 -- --------------------------------------------------------
 
@@ -242,6 +242,7 @@ CREATE TABLE `tblvehicles` (
   `Vimage3` varchar(120) DEFAULT NULL,
   `Vimage4` varchar(120) DEFAULT NULL,
   `Vimage5` varchar(120) DEFAULT NULL,
+  `Vimage6` varchar(120) CHARACTER SET swe7 COLLATE swe7_swedish_ci NOT NULL,
   `AirConditioner` int(11) DEFAULT NULL,
   `PowerDoorLocks` int(11) DEFAULT NULL,
   `AntiLockBrakingSystem` int(11) DEFAULT NULL,
@@ -262,9 +263,8 @@ CREATE TABLE `tblvehicles` (
 -- Dumping data untuk tabel `tblvehicles`
 --
 
-INSERT INTO `tblvehicles` (`id`, `VehiclesTitle`, `VehiclesBrand`, `VehiclesOverview`, `PricePerDay`, `FuelType`, `ModelYear`, `SeatingCapacity`, `Vimage1`, `Vimage2`, `Vimage3`, `Vimage4`, `Vimage5`, `AirConditioner`, `PowerDoorLocks`, `AntiLockBrakingSystem`, `BrakeAssist`, `PowerSteering`, `DriverAirbag`, `PassengerAirbag`, `PowerWindows`, `CDPlayer`, `CentralLocking`, `CrashSensor`, `LeatherSeats`, `RegDate`, `UpdationDate`) VALUES
-(2, 'Taman Edukasi', 2, 'Tanda Peringatan: Rambu-rambu yang memberi tahu pengendara tentang bahaya di depan, seperti tikungan tajam, jalan berbatu, atau jalan licin. Anak perlu belajar mengenali simbol-simbol yang menunjukkan peringatan ini.\r\n\r\nTanda Larangan: Rambu-rambu yang memberitahu pengendara tentang tindakan yang dilarang, seperti larangan berbelok ke arah tertentu, larangan berhenti di tempat tertentu, atau larangan melintasi jalan. Anak perlu memahami arti dan makna dari tanda-tanda larangan ini.\r\n\r\nTanda Perintah: Rambu-rambu yang memberitahu pengendara tentang tindakan yang harus dilakukan, seperti perintah untuk berhenti, mengikuti arah jalan, atau memberi jalan kepada pengendara lain. Anak perlu mengerti instruksi yang terkandung dalam tanda perintah ini.\r\n\r\nTanda Informasi: Rambu-rambu yang memberikan informasi tentang tempat atau tujuan tertentu, seperti tanda jalan keluar, tanda nama jalan, atau tanda jarak tempuh. Anak perlu belajar mengenali simbol-simbol yang menunjukkan informasi ini.\r\n\r\nTanda Pengaturan Lalu Lintas: Rambu-rambu yang ditempatkan oleh petugas lalu lintas atau lampu lalu lintas untuk mengatur aliran kendaraan. Anak perlu memahami arti dari lampu lalu lintas dan tanda-tanda pengaturan lalu lintas seperti panah arah atau tanda tangan petugas lalu lintas.', 0, 'junior high school', 2023, 50, '763281601.jpg', 'banner-image.jpg', '763281601.jpg', 'banner-image.jpg', '', 1, 1, NULL, NULL, 1, NULL, NULL, NULL, 1, NULL, NULL, NULL, '2023-05-23 05:16:51', '2023-05-23 16:04:40'),
-(3, 'Zebra Cross', 2, 'Penyeberangan pejalan[1] atau zebra crossing[2] adalah lajur penyeberangan melintasi jalan yang diperuntukkan untuk pejalan kaki yang akan menyeberangi jalan tersebut, yang dinyatakan dengan markah jalan berupa garis-garis membujur atau setrip berwarna putih yang tebal garisnya sekitar 300 mm dan dengan celah antargaris yang sama dengan panjang garis minimum adalah 2500 mm. Pejalan kaki yang berjalan melalui penyeberangan pejalan akan mendapatkan prioritas terlebih dahulu, kecuali jika penyeberangan pejalan diatur oleh lampu lalu lintas atau tombol kendali. Di tempat-tempat tertentu, pinggiran jalan yang dekat dengan penyeberangan pejalan masih ditambah lagi dengan larangan parkir agar pejalan kaki yang akan menyeberang dapat terlihat oleh pengemudi kendaraan di jalan.', 0, 'Elementary school', 2023, 50, '3.Letter-I-by-Tuomo-Korhonen.png', 'brush-stroke-letter-logo-design-260nw-715075126.webp', 'IMG_1745.png', '3dvic23_abstract_brush_strokes_red_yellow_black_whiite_colors._3f41e215-9be3-48e2-9aa0-49cb6d388469.png', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-23 16:03:34', NULL);
+INSERT INTO `tblvehicles` (`id`, `VehiclesTitle`, `VehiclesBrand`, `VehiclesOverview`, `PricePerDay`, `FuelType`, `ModelYear`, `SeatingCapacity`, `Vimage1`, `Vimage2`, `Vimage3`, `Vimage4`, `Vimage5`, `Vimage6`, `AirConditioner`, `PowerDoorLocks`, `AntiLockBrakingSystem`, `BrakeAssist`, `PowerSteering`, `DriverAirbag`, `PassengerAirbag`, `PowerWindows`, `CDPlayer`, `CentralLocking`, `CrashSensor`, `LeatherSeats`, `RegDate`, `UpdationDate`) VALUES
+(8, 'Nonton film', 3, 'tes', NULL, NULL, NULL, NULL, '101860596_p1.png', '101824221_p0.jpg', '99879309_p0.jpg', '97151675_p0.jpg', '92447157_p0.jpg', '90478641_p0.png', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-27 12:13:42', NULL);
 
 --
 -- Indexes for dumped tables
@@ -344,13 +344,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT untuk tabel `tblbooking`
 --
 ALTER TABLE `tblbooking`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
 
 --
 -- AUTO_INCREMENT untuk tabel `tblbrands`
 --
 ALTER TABLE `tblbrands`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `tblcontactusinfo`
@@ -392,7 +392,7 @@ ALTER TABLE `tblusers`
 -- AUTO_INCREMENT untuk tabel `tblvehicles`
 --
 ALTER TABLE `tblvehicles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
