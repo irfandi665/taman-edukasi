@@ -79,9 +79,6 @@ if (isset($_POST['submit'])) {
 
 <body>
 
-  <!-- Start Switcher -->
-  <?php include('includes/colorswitcher.php'); ?>
-  <!-- /Switcher -->
 
   <!--Header-->
   <?php include('includes/header.php'); ?>
@@ -186,8 +183,8 @@ if (isset($_POST['submit'])) {
                     <input type="text" class="form-control" name="todate" placeholder="Jumlah Peserta" required>
                   </div>
                   <div class="form-group">
-                    <p class="help-block">Surat Pengantar | <span style="color:red">opsional</span></p>
-                    <input type="file" class="form-control" name="message">
+                    <p class="help-block">Surat Pengantar<span style="color:red">*</span></p>
+                    <input type="file" class="form-control" name="message" required>
 
                   </div>
 

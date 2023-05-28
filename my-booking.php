@@ -57,9 +57,7 @@ if (strlen($_SESSION['login']) == 0) {
 
   <body>
 
-    <!-- Start Switcher -->
-    <?php include('includes/colorswitcher.php'); ?>
-    <!-- /Switcher -->
+
 
     <!--Header-->
     <?php include('includes/header.php'); ?>
@@ -131,16 +129,16 @@ if (strlen($_SESSION['login']) == 0) {
                             <li>
                               <div class="vehicle_img"> <a href="vehical-details.php?vhid=<?php echo htmlentities($result->vid); ?>""><img src=" admin/img/vehicleimages/<?php echo htmlentities($result->Vimage1); ?>" alt="image"></a> </div>
                               <div class="vehicle_title">
-                                <h6><a href="vehical-details.php?vhid=<?php echo htmlentities($result->vid); ?>""> <?php echo htmlentities($result->BrandName); ?> , <?php echo htmlentities($result->VehiclesTitle); ?></a></h6>
-                  <p><b>From Date:</b> <?php echo htmlentities($result->FromDate); ?><br /> <b>To Date:</b> <?php echo htmlentities($result->ToDate); ?></p>
+                                <h6><a href="vehical-details.php?vhid=<?php echo htmlentities($result->vid); ?>""> <?php echo htmlentities($result->BrandName); ?>  <?php echo htmlentities($result->VehiclesTitle); ?></a></h6>
+                  <p><b>Tanggal:</b> <?php echo htmlentities($result->FromDate); ?><br /> <b>Peserta:</b> <?php echo htmlentities($result->ToDate); ?></p>
                 </div>
                 <?php if ($result->Status == 1) { ?>
-                <div class=" vehicle_status"> <a href="#" class="btn outline btn-xs active-btn">Confirmed</a>
+                <div class=" vehicle_status"> <a href="#" class="btn outline btn-xs active-btn">Terkonfirmasi</a>
                                     <div class="clearfix"></div>
                               </div>
 
                             <?php } else if ($result->Status == 2) { ?>
-                              <div class="vehicle_status"> <a href="#" class="btn outline btn-xs">Full service</a>
+                              <div class="vehicle_status"> <a href="#" class="btn outline btn-xs">Layanan Penuh</a>
                               <p style="color: red; font-size: 11px;">*Pilih tanggal lain</p>
 
                                 <div class="clearfix"></div>
@@ -149,7 +147,7 @@ if (strlen($_SESSION['login']) == 0) {
 
 
                             <?php } else { ?>
-                              <div class="vehicle_status"> <a href="#" class="btn outline btn-xs">Not Confirm yet</a>
+                              <div class="vehicle_status"> <a href="#" class="btn outline btn-xs">Belum dikonfirmasi</a>
                                 <div class="clearfix"></div>
                               </div>
                             <?php } ?>

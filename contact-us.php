@@ -18,11 +18,11 @@ $query->execute();
 $lastInsertId = $dbh->lastInsertId();
 if($lastInsertId)
 {
-$msg="Query Sent. We will contact you shortly";
+$msg=" Pesan terkirim. kami akan segera menghubungi anda";
 }
 else 
 {
-$error="Something went wrong. Please try again";
+$error="Pesan gagal terkirim";
 }
 
 }
@@ -87,9 +87,7 @@ $error="Something went wrong. Please try again";
 </head>
 <body>
 
-<<!-- Start Switcher -->
-<?php include('includes/colorswitcher.php');?>
-<!-- /Switcher -->  
+  
         
 <!--Header-->
 <?php include('includes/header.php');?>

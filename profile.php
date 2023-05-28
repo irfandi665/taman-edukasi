@@ -88,9 +88,6 @@ if (strlen($_SESSION['login']) == 0) {
 
   <body>
 
-    <!-- Start Switcher -->
-    <?php include('includes/colorswitcher.php'); ?>
-    <!-- /Switcher -->
 
     <!--Header-->
     <?php include('includes/header.php'); ?>
@@ -133,7 +130,7 @@ if (strlen($_SESSION['login']) == 0) {
               <div class="dealer_info">
                 <h5><?php echo htmlentities($result->FullName); ?></h5>
                 <p><?php echo htmlentities($result->Address); ?><br>
-                  <?php echo htmlentities($result->City); ?>&nbsp;<?php echo htmlentities($result->Country); ?></p>
+                  <?php echo htmlentities($result->City); ?>
               </div>
             </div>
 
@@ -169,16 +166,8 @@ if (strlen($_SESSION['login']) == 0) {
                         <input class="form-control white_bg" name="mobilenumber" value="<?php echo htmlentities($result->ContactNo); ?>" id="phone-number" type="text" required>
                       </div>
                       <div class="form-group">
-                        <label class="control-label">Date of Birth&nbsp;(dd/mm/yyyy)</label>
-                        <input class="form-control white_bg" value="<?php echo htmlentities($result->dob); ?>" name="dob" placeholder="dd/mm/yyyy" id="birth-date" type="text">
-                      </div>
-                      <div class="form-group">
                         <label class="control-label">Your Address</label>
                         <textarea class="form-control white_bg" name="address" rows="4"><?php echo htmlentities($result->Address); ?></textarea>
-                      </div>
-                      <div class="form-group">
-                        <label class="control-label">Country</label>
-                        <input class="form-control white_bg" id="country" name="country" value="<?php echo htmlentities($result->Country); ?>" type="text">
                       </div>
                       <div class="form-group">
                         <label class="control-label">City</label>

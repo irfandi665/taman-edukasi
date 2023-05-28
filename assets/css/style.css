@@ -1849,6 +1849,7 @@ input.newsletter-input {
 .footer-bottom {
   background: #191919 none repeat scroll 0 0;
   padding: 22px 0;
+  text-align: center;
 }
 .footer_widget {
   color: #ffffff;

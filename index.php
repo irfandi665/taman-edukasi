@@ -40,9 +40,7 @@ error_reporting(0);
 
 <body>
 
-  <!-- Start Switcher -->
-  <?php include('includes/colorswitcher.php'); ?>
-  <!-- /Switcher -->
+
 
   <!--Header-->
   <?php include('includes/header.php'); ?>
@@ -120,49 +118,7 @@ error_reporting(0);
   </section>
   <!-- /Resent Cat -->
 
-  <!-- Fun Facts-->
-  <section class="section-padding fun-facts-section parallex-bg">
-
-    <div class="container div_zindex">
-      <div class="row">
-        <div class="col-lg-3 col-xs-6 col-sm-3">
-          <div class="fun-facts-m">
-            <div class="cell">
-              <h2><i class="fa fa-calendar" aria-hidden="true"></i>24 x 7</h2>
-              <p>service</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-xs-6 col-sm-3">
-          <div class="fun-facts-m">
-            <div class="cell">
-              <h2><i class="fa fa-car" aria-hidden="true"></i>We are</h2>
-              <p>Hiring Drivers</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-xs-6 col-sm-3">
-          <div class="fun-facts-m">
-            <div class="cell">
-              <h2><i class="fa fa-car" aria-hidden="true"></i>Leave </h2>
-              <p>Feedbacks</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-xs-6 col-sm-3">
-          <div class="fun-facts-m">
-            <div class="cell">
-              <h2><i class="fa fa-user-circle-o" aria-hidden="true"></i>100+</h2>
-              <p>Satisfied Customers</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Dark Overlay-->
-    <div class="dark-overlay"></div>
-  </section>
-  <!-- /Fun Facts-->
+  
 
 
   <!--Testimonial -->
