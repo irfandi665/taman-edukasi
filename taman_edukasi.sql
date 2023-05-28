@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 27 Bulan Mei 2023 pada 14.39
+-- Waktu pembuatan: 28 Bulan Mei 2023 pada 07.18
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.2.4
 
@@ -65,7 +65,9 @@ CREATE TABLE `tblbooking` (
 INSERT INTO `tblbooking` (`id`, `userEmail`, `VehicleId`, `FromDate`, `ToDate`, `message`, `Status`, `PostingDate`) VALUES
 (52, 'tes3@email.com', 2, '2023-05-27 09:11:00', '20', 'news app.pdf', 0, '2023-05-26 02:11:41'),
 (54, 'tes@email.com', 2, '2023-05-27 10:22:00', '34', 'news app-2-5.pdf', 2, '2023-05-26 03:23:08'),
-(55, 'tes@email.com', 8, '2023-06-02 19:14:00', '23', 'news app-2-5.pdf', 0, '2023-05-27 12:14:12');
+(55, 'tes@email.com', 8, '2023-06-02 19:14:00', '23', 'news app-2-5.pdf', 2, '2023-05-27 12:14:12'),
+(56, 'tes@email.com', 8, '2023-05-31 10:32:00', '30', 'news app.pdf', 0, '2023-05-28 03:32:32'),
+(57, 'tes@email.com', 11, '2023-05-30 12:00:00', '34', 'news app.pdf', 2, '2023-05-28 05:00:33');
 
 -- --------------------------------------------------------
 
@@ -128,7 +130,8 @@ CREATE TABLE `tblcontactusquery` (
 --
 
 INSERT INTO `tblcontactusquery` (`id`, `name`, `EmailId`, `ContactNumber`, `Message`, `PostingDate`, `status`) VALUES
-(1, 'tes', 'tes@email.com', '123456789', 'qwe', '2023-05-23 17:10:28', NULL);
+(1, 'tes', 'tes@email.com', '123456789', 'qwe', '2023-05-23 17:10:28', NULL),
+(2, 'tes', 'tes@email.com', '214534', 'afas', '2023-05-28 04:27:56', 1);
 
 -- --------------------------------------------------------
 
@@ -218,7 +221,7 @@ CREATE TABLE `tblusers` (
 --
 
 INSERT INTO `tblusers` (`id`, `FullName`, `EmailId`, `Password`, `ContactNo`, `dob`, `Address`, `City`, `Country`, `RegDate`, `UpdationDate`) VALUES
-(1, 'SMP Negeri 1 London', 'tes@email.com', '202cb962ac59075b964b07152d234b70', '+6285540254876', '2001-01-12', 'Jl. DI Panjaitan No.128, Karangreja, Purwokerto Kidul, Kec. Purwokerto Sel., Kabupaten Banyumas, Jawa Tengah 53147', 'London', 'United Kingdom', '2023-05-22 12:44:22', '2023-05-26 02:44:14'),
+(1, 'SMP Negeri 2 London', 'tes@email.com', '202cb962ac59075b964b07152d234b70', '+6285540254876', NULL, 'Jl. DI Panjaitan No.128, Karangreja, Purwokerto Kidul, Kec. Purwokerto Sel., Kabupaten Banyumas, Jawa Tengah 53147', 'London', NULL, '2023-05-22 12:44:22', '2023-05-28 05:02:16'),
 (2, 'Diki', 'tes2@email.com', '202cb962ac59075b964b07152d234b70', '084015687', NULL, NULL, NULL, NULL, '2023-05-23 04:37:51', NULL),
 (3, 'petot', 'tes3@email.com', '202cb962ac59075b964b07152d234b70', '13165', '', '', 'pwt', 'id', '2023-05-24 12:19:42', '2023-05-24 13:00:53');
 
@@ -264,7 +267,9 @@ CREATE TABLE `tblvehicles` (
 --
 
 INSERT INTO `tblvehicles` (`id`, `VehiclesTitle`, `VehiclesBrand`, `VehiclesOverview`, `PricePerDay`, `FuelType`, `ModelYear`, `SeatingCapacity`, `Vimage1`, `Vimage2`, `Vimage3`, `Vimage4`, `Vimage5`, `Vimage6`, `AirConditioner`, `PowerDoorLocks`, `AntiLockBrakingSystem`, `BrakeAssist`, `PowerSteering`, `DriverAirbag`, `PassengerAirbag`, `PowerWindows`, `CDPlayer`, `CentralLocking`, `CrashSensor`, `LeatherSeats`, `RegDate`, `UpdationDate`) VALUES
-(8, 'Nonton film', 3, 'tes', NULL, NULL, NULL, NULL, '101860596_p1.png', '101824221_p0.jpg', '99879309_p0.jpg', '97151675_p0.jpg', '92447157_p0.jpg', '90478641_p0.png', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-27 12:13:42', NULL);
+(11, 'Berkeliling Menggunakan Bus', 3, 'Berkeliling menggunakan bus adalah sebuah petualangan seru yang dapat membantu kita menjelajahi suatu daerah atau kota. Ketika kita berlibur atau ingin mengenal lebih banyak tempat di sekitar kita, naik bus bisa menjadi pilihan yang menyenangkan. Berkeliling menggunakan bus mengelilingi Purwokerto dengan melewati berbagai jalan dan juga sambil mempelajari rambu-rambu lalu lintas secara langsung di jalan raya', NULL, NULL, NULL, NULL, 'IMG_3484.JPEG', 'IMG_3480.jpg', 'IMG_3482.JPEG', 'IMG_3545.JPEG', 'IMG_3547.jpg', 'IMG_3483.JPEG', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-28 04:26:50', NULL),
+(12, 'Taman Edukasi Lalu Lintas', 3, 'Taman Edukasi Lalu Lintas adalah tempat khusus yang didesain untuk belajar tentang keselamatan jalan dengan cara yang interaktif. Dengan menggunakan simulasi lalu lintas, rambu-rambu, dan aktivitas edukatif, pengunjung, baik anak-anak maupun orang dewasa, dapat memahami aturan lalu lintas, belajar cara berinteraksi dengan kendaraan lain, serta mengembangkan keterampilan mengemudi yang aman. Tujuan dari taman ini adalah untuk meningkatkan kesadaran akan risiko di jalan raya dan mendorong perilaku yang bertanggung jawab dalam berlalu lintas.', NULL, NULL, NULL, NULL, 'IMG_3452.JPEG', 'IMG_3504.JPEG', 'IMG_3536.JPEG', 'IMG_3540.JPEG', 'IMG_3856.JPEG', 'IMG_3837.JPEG', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-28 04:35:58', NULL),
+(13, 'Menonton Film', 3, 'Menonton film edukasi lalu lintas adalah salah satu materi yang menarik di taman edukasi keselamatan jalan. Film-film ini dirancang khusus untuk mengajarkan penonton, terutama anak-anak, tentang aturan lalu lintas, keselamatan berlalu lintas, dan perilaku yang baik di jalan. Dengan menonton film ini, pengunjung dapat memperoleh pemahaman yang lebih mendalam tentang pentingnya mematuhi tanda-tanda lalu lintas, menjaga keselamatan diri, dan bertindak dengan tanggung jawab saat berada di jalan. Film-film edukasi ini juga memberikan contoh kasus nyata dan skenario yang membantu pengunjung dalam mengenali situasi lalu lintas yang mungkin mereka hadapi di kehidupan sehari-hari.', NULL, NULL, NULL, NULL, 'IMG_3840.JPEG', 'IMG_3708.JPEG', 'IMG_3729.JPEG', 'IMG_3733.JPEG', 'IMG_3843.JPEG', 'IMG_3730.JPEG', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-28 04:41:03', NULL);
 
 --
 -- Indexes for dumped tables
@@ -344,7 +349,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT untuk tabel `tblbooking`
 --
 ALTER TABLE `tblbooking`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT untuk tabel `tblbrands`
@@ -362,7 +367,7 @@ ALTER TABLE `tblcontactusinfo`
 -- AUTO_INCREMENT untuk tabel `tblcontactusquery`
 --
 ALTER TABLE `tblcontactusquery`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `tblpages`
@@ -392,7 +397,7 @@ ALTER TABLE `tblusers`
 -- AUTO_INCREMENT untuk tabel `tblvehicles`
 --
 ALTER TABLE `tblvehicles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
